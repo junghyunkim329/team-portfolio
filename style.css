@@ -5,12 +5,19 @@ font-family: "Chiron Hei HK", sans-serif; */
 :root {
   --main-color: rgb(3, 45, 104);
   --text-color: #ffffff;
+  --h1-size: 128px;
+  --h2-size: 48px;
+  --h3-size: 19px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -50,16 +57,17 @@ header {
   z-index: 9999;
   background-color: var(--main-color);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* 로고와 햄버거를 양끝으로 보냅니다 */
   align-items: center;
   padding: 20px 30px;
+  flex-wrap: wrap; /* 추가: 네비게이션이 햄버거 아래로 자연스럽게 떨어지도록 설정 */
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1.2rem;
+  font-size: var(--h3-size);
   letter-spacing: 1px;
 }
 
@@ -71,7 +79,7 @@ header {
 nav ul {
   display: flex;
   gap: 30px;
-  font-size: 1.2rem;
+  font-size: var(--h3-size);
   letter-spacing: 1px;
 }
 
@@ -80,8 +88,49 @@ nav ul li a:hover {
 }
 
 .menu-toggle {
+  cursor: pointer;
+  width: 20px;
   display: none;
-  font-size: 2rem;
+  margin-left: auto;
+}
+
+/* 반응형 웹 (모바일 사이즈) */
+@media (max-width: 768px) {
+  header {
+    /* flex-direction: column;  <-- 이 부분을 지워야 일렬로 유지됩니다! */
+    padding: 20px;
+  }
+
+  nav {
+    width: 100%; /* 메뉴가 아래쪽 전체를 차지하도록 설정 */
+  }
+
+  .menu-toggle {
+    display: block; /* 모바일에서 화면에 짠! 하고 나타남 */
+  }
+
+  nav ul {
+    display: none; /* 모바일에서 기본적으로 메뉴 숨김 */
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    margin-top: var(--h3-size);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* 메뉴 구분선 색상 살짝 변경 */
+  }
+
+  .start .title {
+    font-size: 4rem;
+  }
 }
 
 /* ---------------- MAIN HERO ---------------- */
@@ -94,13 +143,13 @@ nav ul li a:hover {
 }
 
 .start .title {
-  font-size: 8rem;
+  font-size: var(--h1-size);
   letter-spacing: 4px;
 }
 
 .start .subtitle {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 1.5rem;
+  font-size: var(--h3-size);
   letter-spacing: 2px;
   opacity: 0.9;
 }
@@ -122,6 +171,15 @@ nav ul li a:hover {
   justify-content: space-between;
   width: 100%;
   gap: 50px;
+  opacity: 0;
+  transform: translateY(50px); /* 50px 아래에 위치 */
+  transition: all 0.8s ease-out; /* 0.8초 동안 부드럽게 변함 */
+}
+
+/* 화면에 나타났을 때 추가될 클래스 */
+.start-payload-grid.show {
+  opacity: 1;
+  transform: translateY(0); /* 원래 위치로 이동 */
 }
 
 /* 세 번째 줄 위쪽 정렬 */
@@ -129,16 +187,24 @@ nav ul li a:hover {
   align-items: flex-start;
 }
 
+/* 두 번째 그리드에만 약간의 지연 시간 추가 */
+.start-payload-grid:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+/* 세 번째 그리드에 더 긴 지연 시간 추가 */
+.start-payload-grid:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
 .payload {
-  font-size: 3rem;
+  font-size: var(--h2-size);
   font-weight: 800;
   line-height: 1.3;
   flex: 1;
-  word-break: keep-all;
-}
+  text-align: center;
 
-.right-align {
-  text-align: right;
+  word-break: keep-all;
 }
 
 .profile-img {
@@ -154,7 +220,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  font-size: 1.2rem;
+  font-size: var(--h3-size);
   font-weight: 500;
   margin-top: 10px;
 }
@@ -179,7 +245,7 @@ footer {
 }
 
 footer h3 {
-  font-size: 1.2rem;
+  font-size: var(--h3-size);
   margin-bottom: 40px;
   letter-spacing: 2px;
 }
@@ -194,7 +260,7 @@ footer h3 {
 }
 
 .link {
-  font-size: 5rem;
+  font-size: 80px;
   transition: 0.3s;
 }
 
@@ -204,9 +270,10 @@ footer h3 {
 
 .info {
   display: flex;
+  align-items: center;
   justify-content: space-between; /* 양쪽 끝으로 요소를 밀어냅니다 */
   opacity: 0.6;
-  font-size: 1.2rem;
+  font-size: var(--h3-size);
   letter-spacing: 1px;
   width: 100%;
 }
@@ -257,5 +324,9 @@ footer h3 {
   .description-list {
     text-align: left;
     margin-top: 20px;
+  }
+
+  .link {
+    font-size: 50px;
   }
 }
