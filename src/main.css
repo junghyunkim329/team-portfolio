@@ -1,9 +1,0 @@
-.main-content {
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 50px;
-  min-height: 100vh; /* 화면을 꽉 채우도록 설정 */
-  background: linear-gradient(200deg, #caffd4, #ffd8f0);
-  display: flex;
-  text-align: center;
-}
