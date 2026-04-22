@@ -1,0 +1,71 @@
+<!-- 홈 화면 -->
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>김정현</title>
+  </head>
+  <body>
+    <!-- 메뉴바 -->
+    <header>
+      <a href="index.html" class="logo">My Portfolio</a>
+      <!-- 이거 햄버거 바 이미지로 바꿔야 함 -->
+      <div class="menu-toggle" id="mobile-menu">☰</div>
+      <nav>
+        <ul id="nav-links">
+          <li><a href="./pages/tech.html">경력</a></li>
+          <li><a href="./pages/team.html">팀</a></li>
+          <li><a href="./pages/egg.html">이스터에그</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 콘텐츠 -->
+    <section class="container">
+      <div class="content">
+        <div class="main-content">
+          <h1 class="main-cotent-grid">
+            성장하는 000
+            <br />
+            <span style="color: blueviolet">김정현 </span>
+            입니다
+          </h1>
+          <img
+            src="../assets/kjh.png"
+            alt="프로필 사진"
+            class="profile-pic main-cotent-grid"
+          />
+          <img src="#" alt="" class="bottom" />
+        </div>
+        <div class="side-content">
+          <div class="links-container">
+            <a
+              href="https://github.com/junghyunkim329"
+              target="_blank"
+              class="btn"
+              >GitHub 프로필</a
+            >
+            <a
+              href="https://shshjang14.tistory.com/"
+              target="_blank"
+              class="btn"
+              >기술 블로그</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const menuToggle = document.getElementById('mobile-menu')
+      const navLinks = document.getElementById('nav-links')
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active')
+      })
+    </script>
+  </body>
+</html>
