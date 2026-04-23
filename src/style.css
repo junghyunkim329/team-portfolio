@@ -199,6 +199,35 @@ main {
   width: 800px;
 }
 
+.container {
+  padding: 100px 5% 0; /* 헤더 높이만큼 상단 여백 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------------- public page ---------------- */
+
+/* 거대 타이틀 */
+.giant-title {
+  display: flex;
+  justify-content: center; /* 세로 방향 가운데 정렬 (컨테이너 높이가 있을 때) */
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 8rem;
+  line-height: 1;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+.intro-text {
+  display: flex;
+  justify-content: center; /* 세로 방향 가운데 정렬 (컨테이너 높이가 있을 때) */
+  align-items: center;
+  font-size: var(--h3-size);
+  padding: 20px;
+  margin: 20px;
+}
+
 /* ---------------- FOOTER ---------------- */
 footer {
   text-align: center;
