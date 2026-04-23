@@ -1,0 +1,121 @@
+/* ---------------- 모바일 반응형 ---------------- */
+@media (max-width: 768px) {
+  h1 {
+    letter-spacing: -4px;
+  }
+
+  /* header */
+  header {
+    padding: 20px;
+  }
+
+  nav {
+    width: 100%; /* 메뉴가 아래쪽 전체를 차지하도록 설정 */
+  }
+
+  nav ul {
+    display: none; /* 모바일에서 기본적으로 메뉴 숨김 */
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    margin-top: var(--h3-size);
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* 메뉴 구분선 색상 살짝 변경 */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* footer */
+  .link {
+    font-size: 50px;
+  }
+
+  /* index */
+  .start .title {
+    font-size: var(--h1-msize);
+  }
+
+  .start .subtitle {
+    font-size: var(--h3-msize);
+  }
+
+  .start-payload-grid,
+  .start-payload-grid.reverse,
+  .start-payload-grid.top-align {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .right-align {
+    text-align: center;
+  }
+
+  .description-list {
+    width: 300px;
+  }
+
+  .payload {
+    font-size: var(--h2-msize);
+  }
+
+  .profile-img {
+    width: 250px;
+  }
+
+  /* public page */
+  .giant-title {
+    font-size: var(--h1-msize);
+  }
+  /* team page */
+  .profile-content {
+    flex-direction: column;
+  }
+
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-image-box {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .profile-image-box img {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .profile-details {
+    padding: 30px;
+  }
+
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .member-card {
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .member-card:last-child {
+    border-bottom: none; /* 마지막 카드는 오른쪽 테두리 제거 */
+  }
+  .member-img-placeholder img {
+    max-width: 200px;
+  }
+}
