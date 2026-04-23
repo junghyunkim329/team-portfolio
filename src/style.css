@@ -8,6 +8,9 @@ font-family: "Chiron Hei HK", sans-serif; */
   --h1-size: 128px;
   --h2-size: 48px;
   --h3-size: 19px;
+  --h1-msize: 64px;
+  --h2-msize: 32px;
+  --h3-msize: 16px;
 }
 
 * {
@@ -32,7 +35,7 @@ body.index-page {
 }
 
 h1 {
-  letter-spacing: -10px;
+  letter-spacing: -8px;
 }
 
 /* 영문 타이틀용 두꺼운 폰트 */
@@ -101,45 +104,6 @@ nav ul li a:hover {
   width: 20px;
   display: none;
   margin-left: auto;
-}
-
-/* 반응형 웹 (모바일 사이즈) */
-@media (max-width: 768px) {
-  header {
-    /* flex-direction: column;  <-- 이 부분을 지워야 일렬로 유지됩니다! */
-    padding: 20px;
-  }
-
-  nav {
-    width: 100%; /* 메뉴가 아래쪽 전체를 차지하도록 설정 */
-  }
-
-  .menu-toggle {
-    display: block; /* 모바일에서 화면에 짠! 하고 나타남 */
-  }
-
-  nav ul {
-    display: none; /* 모바일에서 기본적으로 메뉴 숨김 */
-    flex-direction: column;
-    width: 100%;
-    gap: 0;
-    margin-top: var(--h3-size);
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* 메뉴 구분선 색상 살짝 변경 */
-  }
-
-  .start .title {
-    font-size: 4rem;
-  }
 }
 
 /* ---------------- MAIN HERO ---------------- */
@@ -227,7 +191,6 @@ main {
   flex-shrink: 0;
 }
 
-/* 3번째 줄 우측 번호 리스트 */
 .description-list {
   flex: 1;
   display: flex;
@@ -280,48 +243,4 @@ footer h3 {
 
 .info p {
   margin-bottom: 0;
-}
-
-/* ---------------- 모바일 반응형 ---------------- */
-@media (max-width: 768px) {
-  .start .title {
-    font-size: 4rem;
-  }
-  .start .subtitle {
-    font-size: 1rem;
-  }
-
-  header {
-    padding: 20px;
-  }
-  nav ul {
-    display: none;
-  }
-  .menu-toggle {
-    display: block;
-  }
-
-  .start-payload-grid,
-  .start-payload-grid.reverse,
-  .start-payload-grid.top-align {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .right-align {
-    text-align: center;
-  }
-
-  .payload {
-    font-size: 2rem;
-  }
-
-  .profile-img {
-    width: 250px;
-  }
-
-  .link {
-    font-size: 50px;
-  }
 }
