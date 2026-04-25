@@ -1,6 +1,17 @@
+:root {
+  --main-color: rgb(3, 45, 104);
+  --text-color: #ffffff;
+  --h1-size: 128px;
+  --h2-size: 48px;
+  --h3-size: 19px;
+  --h1-msize: 64px;
+  --h2-msize: 32px;
+  --h3-msize: 16px;
+}
+
 /* ---------------- 모바일 반응형 ---------------- */
 @media (max-width: 768px) {
-  h1 {
+  h1:not(.folder-text) {
     letter-spacing: -4px;
   }
 
@@ -37,6 +48,13 @@
   }
 
   /* footer */
+  footer {
+    padding-top: 300px;
+  }
+  .links-container {
+    padding-bottom: 70px;
+  }
+
   .link {
     font-size: 50px;
   }
@@ -117,5 +135,63 @@
   }
   .member-img-placeholder img {
     max-width: 200px;
+  }
+
+  /* ---------프로젝트 -----------*/
+  .project-list {
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+
+  .project-title {
+    font-size: 25px;
+  }
+
+  .folder-img {
+    display: none;
+  }
+
+  .project-item {
+    grid-template-columns: none;
+  }
+
+  .blind-folder {
+    display: block;
+  }
+
+  /* ------- 세부 프로젝트 -------- */
+  .project-header {
+    flex-direction: column; /* 가로 배치를 세로 배치로 변경 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    padding: 0;
+    gap: 20px; /* 텍스트 그룹과 이미지 사이의 간격 */
+  }
+
+  .back-button {
+    margin-top: 5px;
+  }
+
+  .project-title h2 {
+    font-size: 25px;
+  }
+
+  .project-title h3 {
+    font-size: var(--h3-msize);
+  }
+
+  .project-script {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .project-script.detail {
+    padding: 50px 0 50px;
+  }
+
+  /* 2. 이미지를 타이틀 시작선에 보기 좋게 맞추기 (선택 사항) */
+  .project-logo {
+    margin: auto;
+    margin-bottom: 50px;
+    height: 120px; /* 모바일에서는 이미지 크기를 살짝 줄임 */
   }
 }

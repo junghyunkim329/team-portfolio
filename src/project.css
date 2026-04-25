@@ -60,3 +60,9 @@
   pointer-events: none; /* 마우스 이벤트 완전히 무시 (클릭 안 됨) */
   user-select: none; /* 텍스트 선택도 안 되게 설정 (선택 사항) */
 }
+
+.blind-folder {
+  display: none;
+  margin: auto;
+  width: 100px;
+}
