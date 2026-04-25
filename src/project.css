@@ -1,0 +1,62 @@
+:root {
+  --main-color: rgb(3, 45, 104);
+  --text-color: #ffffff;
+  --h1-size: 128px;
+  --h2-size: 48px;
+  --h3-size: 19px;
+  --h1-msize: 64px;
+  --h2-msize: 32px;
+  --h3-msize: 16px;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px; /* 폭을 조금 넓히는 게 좋아요 */
+  margin: 60px auto 200px; /* 화면 중앙 배치 */ /* 상 우 하 좌 */
+}
+
+.project-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* [이미지] [글자(넓게)] [이미지] 3등분 */
+  align-items: center;
+  width: 100%;
+  text-align: center; /* 글자 중앙 정렬 */
+}
+
+.folder-img {
+  width: 80px;
+  height: auto;
+  justify-self: center; /* 그리드 칸 안에서 중앙 배치 */
+  transition: transform 0.4s ease;
+}
+
+/* 왼쪽 이미지 기울기 */
+.folder-img.left {
+  transform: rotate(20deg);
+}
+
+/* 오른쪽 이미지 기울기 */
+.folder-img.right {
+  transform: rotate(-20deg);
+}
+
+/* 호버 시 원래대로 */
+.project-item:hover .folder-img {
+  transform: rotate(0deg);
+}
+
+.project-title {
+  font-family: 'Archivo Black', sans-serif;
+  color: #003366;
+  font-size: var(--h2-size);
+  margin: 0;
+  white-space: nowrap; /* 글자가 줄바꿈되지 않도록 고정 */
+}
+
+.empty {
+  width: 80px; /* 이미지와 동일한 너비 유지 */
+  pointer-events: none; /* 마우스 이벤트 완전히 무시 (클릭 안 됨) */
+  user-select: none; /* 텍스트 선택도 안 되게 설정 (선택 사항) */
+}

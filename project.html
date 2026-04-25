@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/style.css" />
-    <link rel="stylesheet" href="./src/team.css" />
+    <link rel="stylesheet" href="./src/project.css" />
     <link rel="stylesheet" href="./src/mobile.css" />
   </head>
   <body>
@@ -41,12 +41,57 @@
       </section>
 
       <section class="project-list">
-        <div class="scp">
-          <img src="./assets/folder.png" alt="" />
-        </div>
+        <!-- 첫 번째: 왼쪽 이미지 (오른쪽 빈칸) -->
+        <a href="./src/project/scurity-check-point.html" class="project-item">
+          <img
+            src="./assets/folder-blue.png"
+            alt="folder"
+            class="folder-img left"
+          />
+          <h2 class="project-title">Security Check Point</h2>
+          <div class="empty"></div>
+          <!-- 오른쪽 빈자리 -->
+        </a>
+
+        <!-- 두 번째: 오른쪽 이미지 (왼쪽 빈칸) -->
+        <a href="./src/project/likelion.html" class="project-item">
+          <div class="empty"></div>
+          <!-- 왼쪽 빈자리 -->
+          <h2 class="project-title">멋쟁이 사자처럼 13기</h2>
+          <img
+            src="./assets/folder-blue.png"
+            alt="folder"
+            class="folder-img right"
+          />
+        </a>
+
+        <!-- 세 번째: 왼쪽 이미지 (오른쪽 빈칸) -->
+        <a href="./src/project/Jeanne-dArc.html" class="project-item">
+          <img
+            src="./assets/folder-blue.png"
+            alt="folder"
+            class="folder-img left"
+          />
+          <h2 class="project-title">잔다르크 게임 제작</h2>
+          <div class="empty"></div>
+          <!-- 오른쪽 빈자리 -->
+        </a>
+
+        <!-- 네 번째: 오른쪽 이미지 (왼쪽 빈칸) -->
+        <a href="./src/project/etc.html" class="project-item">
+          <div class="empty"></div>
+          <!-- 왼쪽 빈자리 -->
+          <h2 class="project-title">그 외</h2>
+          <img
+            src="./assets/folder-blue.png"
+            alt="folder"
+            class="folder-img right"
+          />
+        </a>
       </section>
     </main>
 
+    <!-- footer -->
     <footer>
       <h3>MY LINKS !</h3>
       <div class="links-container">
@@ -92,8 +137,8 @@
       }, observerOptions)
 
       // .start-payload-grid 클래스를 가진 모든 요소를 찾아 감시 시작
-      const revealElements = document.querySelectorAll('.start-payload-grid')
-      revealElements.forEach((el) => observer.observe(el))
+      const etcSection = document.querySelector('.etc')
+      observer.observe(etcSection)
     </script>
   </body>
 </html>
