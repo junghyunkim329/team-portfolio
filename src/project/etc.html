@@ -10,100 +10,68 @@
       href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../style.css" />
-    <link rel="stylesheet" href="../../etc.css" />
-    <link rel="stylesheet" href="../../mobile.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../etc.css" />
+    <link rel="stylesheet" href="../mobile.css" />
   </head>
   <body>
     <header>
-      <a href="../../../index.html" class="logo pointer">
-        <img src="../../../assets/home.png" alt="" class="logo-img" />
+      <a href="../../index.html" class="logo pointer">
+        <img src="../../assets/home.png" alt="" class="logo-img" />
         <div class="nav-link">HOME</div>
       </a>
       <img
-        src="../../../assets/list.png"
+        src="../../assets/list.png"
         alt=""
         class="menu-toggle"
         id="mobile-menu"
       />
       <nav>
         <ul class="nav-link pointer" id="nav-links">
-          <li><a href="../../../project.html">PROJECT</a></li>
-          <li><a href="../../../team.html">TEAM</a></li>
+          <li><a href="../../project.html">PROJECT</a></li>
+          <li><a href="../../team.html">TEAM</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- public main -->
     <main class="container">
-      <section class="project-header detail">
+      <section class="project-header">
         <div class="project-header-left">
-          <!-- 경로확인 필수---------------------------->
-          <a href="../../project/scurity-check-point.html">
+          <a href="../../project.html">
             <img
-              src="../../../assets/double-left.png"
+              src="../../assets/double-left.png"
               alt=""
               class="back-button"
             />
           </a>
           <div class="project-title">
-            <h2>HACK_IN</h2>
-            <h3>25.06.30 ~ 25.08.18</h3>
+            <h2>그 외</h2>
           </div>
         </div>
-        <img src="../../../assets/SCP.png" alt="" class="project-logo" />
+        <img src="../../assets/people/laptop.png" alt="" class="project-logo" />
       </section>
 
-      <section class="project-script detail">
-        <div class="project-detail">
-          <h3 class="project-detail-title">Project Overview</h3>
-          <div class="project-detail-payload">
-            <ul>
-              <li>시스템 해킹 하~중 단계의 Wargame 제작</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project-detail">
-          <h3 class="project-detail-title">Activities</h3>
-          <div class="project-detail-payload">
-            <ul>
-              <li>시스템 해킹 stack exploit 기법 공부</li>
-              <li>인당 3~5개의 시스템 해킹 문제 출제</li>
-              <li>
-                AWS를 통한 Wargame 사이트 배포 및 Docker를 이용한 문제 빌드
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="project-detail">
-          <h3 class="project-detail-title">Resources</h3>
-          <div class="project-detail-payload">
-            <ul>
-              <li>AWS Free Tier</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project-detail">
-          <h3 class="project-detail-title">Members</h3>
-          <div class="project-detail-payload">
-            <ul>
-              <li>김▭준(PL)</li>
-              <li>김▭원(PA)</li>
-              <li>김정현(PA)</li>
-              <li>박▭빈(PA)</li>
-              <li>심▭훈(PA)</li>
-              <li>양▭권(PA)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="project-detail">
-          <h3 class="project-detail-title">Achievements</h3>
-          <div class="project-detail-payload">
-            <ul>
-              <li>시스템 해킹 입문자에게 공격 기법별 기초 문제 제공</li>
-            </ul>
-          </div>
-        </div>
+      <section class="project-script">
+        <!-- 첫 번째 폴더 -->
+        <a
+          href="./etc/data-analysis.html"
+          class="folder-link"
+          data-tooltip="창의융합주제탐구"
+        >
+          <img src="../../assets/folder-blue.png" alt="" />
+          <p>데이터 분석 프로그램</p>
+        </a>
+
+        <!-- 두 번째 폴더 -->
+        <a
+          href="./etc/ship-big-data.html"
+          class="folder-link"
+          data-tooltip="우수상"
+        >
+          <img src="../../assets/folder-blue.png" alt="" />
+          <p>선박 빅데이터 공모전</p>
+        </a>
       </section>
     </main>
 
