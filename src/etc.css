@@ -1,0 +1,90 @@
+:root {
+  --main-color: rgb(3, 45, 104);
+  --text-color: #ffffff;
+  --h1-size: 128px;
+  --h2-size: 48px;
+  --h3-size: 19px;
+  --h1-msize: 64px;
+  --h2-msize: 32px;
+  --h3-msize: 16px;
+}
+
+.back-button {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.project-header {
+  padding: 0 60px; /* 'auto' 대신 상하 여백 수치(0 등)를 넣어주세요 */
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  /* 핵심: 자식 요소들을 양 끝(왼쪽 끝, 오른쪽 끝)으로 배치 */
+  justify-content: space-between;
+
+  /* 혹시 박스 크기가 화면을 벗어나면 아래 속성 추가 */
+  box-sizing: border-box;
+}
+
+.project-title {
+  margin: 0; /* 기본 마진 제거로 정렬을 더 깔끔하게 */
+}
+
+.project-title h2 {
+  font-size: var(--h2-size);
+}
+
+.project-title h3 {
+  font-size: var(--h3-size);
+}
+
+.project-logo {
+  height: 150px;
+  width: auto;
+}
+
+.project-script {
+  padding: 60px 60px 100px;
+  display: flex; /* 가로로 나열 */
+  gap: 40px; /* 👈 폴더 사이 간격 20px */
+  flex-wrap: wrap; /* 화면이 좁아지면 다음 줄로 넘어가게 설정 */
+}
+
+/* 개별 폴더 링크 스타일 */
+.folder-link {
+  display: flex;
+  flex-direction: column; /* 이미지-글자 세로 나열 */
+  align-items: center; /* 이미지-글자 중앙 정렬 */
+  text-decoration: none;
+  color: inherit;
+  width: fit-content;
+}
+
+.folder-link img {
+  width: 100px;
+  height: auto;
+}
+
+.folder-link p {
+  margin-top: 10px;
+}
+
+/* 세부 프로젝트-------------- */
+.project-header.detail {
+  border-bottom: 1px solid #ccc;
+}
+
+.project-detail-title {
+  font-size: var(--h3-size);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-detail-payload ul {
+  padding-left: 20px;
+  list-style: disc;
+  display: grid;
+  gap: 10px;
+}

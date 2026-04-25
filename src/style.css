@@ -34,7 +34,7 @@ body.index-page {
   color: var(--text-color);
 }
 
-h1 {
+h1:not(.folder-text) {
   letter-spacing: -8px;
 }
 
@@ -52,7 +52,7 @@ a {
   color: inherit;
 }
 
-ul {
+ul:not(.project-detail-payload) {
   list-style: none;
 }
 
@@ -215,7 +215,7 @@ main {
   font-size: 8rem;
   line-height: 1;
   padding: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   border-bottom: 1px solid #ccc;
 }
 
