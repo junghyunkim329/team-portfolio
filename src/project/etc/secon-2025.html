@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KIM’s</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../etc.css" />
+    <link rel="stylesheet" href="../../mobile.css" />
+    <link rel="icon" href="../../../assets/icon.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <a href="../../../index.html" class="logo pointer">
+        <img src="../../../assets/home.png" alt="" class="logo-img" />
+        <div class="nav-link">HOME</div>
+      </a>
+      <img
+        src="../../../assets/list.png"
+        alt=""
+        class="menu-toggle"
+        id="mobile-menu"
+      />
+      <nav>
+        <ul class="nav-link pointer" id="nav-links">
+          <li><a href="../../../project.html">PROJECT</a></li>
+          <li><a href="../../../team.html">TEAM</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- public main -->
+    <main class="container">
+      <section class="project-header detail">
+        <div class="project-header-left">
+          <!-- 경로확인 필수------------------------------------>
+          <a href="../../project/etc.html">
+            <img
+              src="../../../assets/double-left.png"
+              alt=""
+              class="back-button"
+            />
+          </a>
+          <div class="project-title">
+            <h2>SECON 2025</h2>
+            <h3>25.03.21</h3>
+          </div>
+        </div>
+        <!--사진 수정해!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11-->
+        <img
+          src="../../../assets/data-analysis.png"
+          alt=""
+          class="project-logo"
+        />
+      </section>
+
+      <section class="project-script detail">
+        <div class="project-detail">
+          <h3 class="project-detail-title">Overview</h3>
+          <div class="project-detail-payload">
+            <ul>
+              <li>
+                보안 지식이 부족한 상태로 참관을 해서 그런지 어려운 개념이
+                많았다. 하지만 설명해주시는 분들께서 개념과 보안 트렌드를 자세히
+                설명해주셔서 유익한 참관이 되었다. 설명을 듣던 중 보안 트렌드를
+                발표하는 ‘<b>가트너</b>’의 존재를 알게되었다. 앞으로 보안
+                트렌드를 정리할 때 꼭 참고하고 해당 기사에서 모르는 개념이 나올
+                때마다 정리하면 공부에 도움이 될 것 같다.
+              </li>
+              <li>
+                올해 트렌드는 <b>XDR</b>로 EDR이나 NDR같은 것들을 통합 관제센터
+                역할을 하는 것으로 보면 된다고 했다. 조금 늦게 가서 많은 기업을
+                보진 못했다. 참관 기업으로는 안랩과 로그프레소, 위즈가 있다. 이
+                외에는 부스 내부에 있는 내용을 보여 타 기업들의 보안적 관점을
+                확인하였다.
+              </li>
+              <li>
+                보안 엑스포를 갔다온 이후 본 다양한 개념과 종류 중에서 물리적
+                보안과 XDR에 대해 관심을 가지게 되었다. 추후 이와 관련된 발표를
+                준비하는 것도 좋을 것 같다.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h3>MY LINKS !</h3>
+      <div class="links-container">
+        <a href="https://github.com/junghyunkim329" class="link" target="_blank"
+          >GITHUB</a
+        >
+        <a href="https://shshjang14.tistory.com/" class="link" target="_blank"
+          >BLOG</a
+        >
+        <a href="https://final-studeo.vercel.app/" class="link" target="_blank"
+          >TEAM PROJECT</a
+        >
+      </div>
+      <div class="info">
+        <p class="left">KIM'S PORTFOLIO</p>
+        <p class="right">©2026</p>
+      </div>
+    </footer>
+    <script>
+      // 햄버거 메뉴
+      const menuToggle = document.getElementById('mobile-menu')
+      const navLinks = document.getElementById('nav-links')
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active')
+      })
+
+      // Intersection Observer 설정
+      const observerOptions = {
+        root: null, // 브라우저 뷰포트를 기준으로 감시
+        threshold: 0.1, // 요소가 10% 정도 보이기 시작할 때 실행
+      }
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // 화면에 들어왔을 때 'show' 클래스 추가
+            entry.target.classList.add('show')
+            // 한 번 나타난 후에는 감시를 중단하고 싶다면 아래 주석 제거
+            observer.unobserve(entry.target)
+          }
+        })
+      }, observerOptions)
+
+      // .start-payload-grid 클래스를 가진 모든 요소를 찾아 감시 시작
+      const revealElements = document.querySelectorAll('.start-payload-grid')
+      revealElements.forEach((el) => observer.observe(el))
+    </script>
+  </body>
+</html>
