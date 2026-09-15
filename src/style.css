@@ -273,3 +273,7 @@ footer h3 {
 .info p {
   margin-bottom: 0;
 }
+
+.project-detail-img {
+  width: 500px;
+}

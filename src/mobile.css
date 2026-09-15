@@ -120,6 +120,9 @@
   .profile-details {
     padding: 30px;
   }
+  .project-detail-img {
+    width: 200px;
+  }
 
   .member-grid {
     grid-template-columns: 1fr;
